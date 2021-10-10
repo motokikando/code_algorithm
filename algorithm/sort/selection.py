@@ -18,6 +18,8 @@ def selection_sort(numbers:List[int]) -> List[int]:
             if numbers[min_index ] > numbers[j]:
                 min_index = j
         numbers[i], numbers[min_index] = numbers[min_index], numbers[i]
+    return numbers
+    
 
 
 if __name__ == '__main__':
