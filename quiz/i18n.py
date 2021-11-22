@@ -11,9 +11,11 @@
 
 #AroundSpace
 N = int(input())
-#もし0.5のべき乗をして
 for i in reversed(range(N+1)):
     if (i**0.5).is_integer():
         print(i)
         break
+
+
+
 
