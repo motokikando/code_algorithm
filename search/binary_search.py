@@ -16,7 +16,6 @@ def binary_search(numbers:List[int], value:int) -> int:
         else:
             right = mid - 1
     return -1
-    
 
 
 if __name__=='__main__':
