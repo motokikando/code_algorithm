@@ -8,7 +8,8 @@ class Solution:
                nums.pop(i)
         for i in range(len(nums)):
             print(nums[j])
-            
+
+
 
 
         return nums
