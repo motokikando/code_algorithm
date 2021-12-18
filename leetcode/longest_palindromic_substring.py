@@ -13,12 +13,6 @@ class Solution:
         return ans
 
 
-
-
-
-
-
-
 if __name__== '__main__':
     a = Solution()
     string = 'bgjgikuoukskjgsk'
