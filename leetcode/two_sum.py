@@ -19,7 +19,6 @@ class Solution:
                 break
             pivot += 1
         return output
-
 class Solution2:
     def twoSum(self, nums: List[int], target: int):
         output = {}
