@@ -19,7 +19,7 @@ class Solution:
 
 if __name__ == '__main__':
     a = [1, 3, 5, 6 , 8, 10 ,12 ]
-    t = 14
+    t = 7
     s = Solution()
     print(s.searchInsert(a, t))
 

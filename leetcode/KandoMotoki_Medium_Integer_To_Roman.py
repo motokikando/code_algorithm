@@ -4,7 +4,7 @@ class Solution:
         roman_5 = ['V', 'L', 'D']
         ans = []
 
-        for i in range(len(str(num))):
+        for i in range(num):
             n = num % 10
             if n == 9:
                 ans.append(roman_1[i]+roman_1[i+1])
