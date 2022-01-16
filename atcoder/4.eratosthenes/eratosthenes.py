@@ -12,3 +12,4 @@ def sieve(n):
     return is_prime, table
 
 print(sieve(100))
+
