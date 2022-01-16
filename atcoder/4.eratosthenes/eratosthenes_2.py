@@ -29,5 +29,19 @@ def is_prime3(num:int) -> bool:
             return False
     return True
 
-print(is_prime3(35))
+
 # print(is_prime2(5))
+
+def is_prime4(num:int) -> bool:
+    if num <= 1:
+        return False
+    elif num == 2:
+        return True
+    elif num % 2 == 0:
+        return False
+
+    for i in range(3, math.floor(num**0.5)+1,2):
+        if num % i == 0:
+            return False
+    return False
+print(is_prime4(2))
