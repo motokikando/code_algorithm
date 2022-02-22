@@ -13,4 +13,3 @@ def get_power(n:int, x:List[int]) -> int:
 
 print(get_power(n,x))
 
-
