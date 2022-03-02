@@ -26,29 +26,24 @@ from typing import List
 def merge_sort(numbers: List[int]) -> List[int]:
     if len(numbers) <= 1:
         return numbers
-
     center = len(numbers) // 2
     left = numbers[:center]
     right = numbers[center:]
     merge_sort(left)
     merge_sort(right)
     i=j=k=0
-
     while len(left) > i and len(right) > j:
         if left[i] <= right[j]:
             numbers[k] = left[i]
             i += 1
-
         else:
             numbers[k] = right[j]
             j += 1
         k += 1
-
     while len(left) > i:
         numbers[k]=left[i]
         i += 1
         k += 1
-
     while len(right) > j:
         numbers[k]=right[j]
         j += 1

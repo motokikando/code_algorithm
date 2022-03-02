@@ -21,8 +21,6 @@ def partititon(numbers: List[int], low:int, high:int) -> int:
 
 
 
-
-
 #quick_sortを定義, 変数名はnumbers def <関数名>(<変数名>:<型>) -><戻り値の型>:
 def quick_sort(numbers: List[int]) -> List[int]:
     #inner関数を定義
