@@ -1,1 +1,1 @@
-アルゴリズム学習用のリポジトリです。
+Algorithm repository 
