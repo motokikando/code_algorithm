@@ -21,8 +21,8 @@ def get_chocorate_num(a:int, d:int) -> int:
 print(sum_chocorate_nums(D, X, A))
 
 
-n,d,x,*a=map(int,open(0).read().split())
-print(a)
-s=[print(range(1,d+1,c)) for c in a]
-print(s)
+# n,d,x,*a=map(int,open(0).read().split())
+# print(a)
+# s=[print(range(1,d+1,c)) for c in a]
+# print(s)
 # print(sum(s)+x)
