@@ -1,5 +1,4 @@
 from typing import List
-import math
 import itertools
 num = int(input())
 P = list(map(int, input().split()))
@@ -14,7 +13,7 @@ def get_count_order(n:int, P:List[int],Q:List[int]) -> int:
         elif list(item) == Q:
             ans -= idx+1
         elif P == Q:
-            ans = 0 
+            ans = 0
     return abs(ans)
 
 
