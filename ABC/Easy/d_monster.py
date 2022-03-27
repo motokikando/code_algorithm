@@ -1,4 +1,6 @@
-h = int(input())
+h = " "
+class OriginalTypeError(Exception):
+    pass
 
 def count_attack(h:int) -> int:
     i = 1
@@ -8,5 +10,9 @@ def count_attack(h:int) -> int:
         h = h//2
         i = i*2
     return ans
+# print(count_attack(h))
+try:
+    print(count_attack(h))
+except:
+    raise OriginalTypeError("TypeError")
 
-print(count_attack(h))
