@@ -8,5 +8,4 @@ def judge(s:str) -> str:
         elif s[i] in l:
             return "no"
     return "yes"
-
 print(judge(S))
