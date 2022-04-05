@@ -10,5 +10,3 @@ def get_max(l: List[int]):
         else:
             print(sort_l[-2])
 get_max(sequence)
-
-
