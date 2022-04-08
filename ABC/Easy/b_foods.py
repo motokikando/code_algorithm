@@ -10,5 +10,3 @@ def count_loved_foods(L, M) ->int:
     return len(ans)
 
 print(count_loved_foods(K, M))
-
-
