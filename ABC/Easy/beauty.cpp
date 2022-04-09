@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+[#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -18,4 +18,4 @@ int main(){
         }
     cout << "Yes" << endl;
     return 0;
-}
+}]
