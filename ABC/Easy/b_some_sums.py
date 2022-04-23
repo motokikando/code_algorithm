@@ -11,8 +11,3 @@ def get_some_sums(n:int, a:int, b:int) -> int:
     return ans
 
 print(get_some_sums(N, A, B))
-
-
-
-
-
