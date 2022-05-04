@@ -10,7 +10,6 @@ def knapsack(n, w)-> int:
                 dp[i][j] = dp[i-1][j]
             else:
                 dp[i][j] = max(dp[i-1][j] , dp[i-1][j-wi]+vi)
-            print(dp[i][j])
     return dp[n][w]
 
 print(knapsack(N, W))
