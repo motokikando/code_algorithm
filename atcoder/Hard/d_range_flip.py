@@ -1,42 +1,22 @@
-import math
-h, w = map(int,input().split())
-a = [list(input()) for i in range(h)]
+#!/usr/bin/env python3
+h, w = map(int, input().split())
+grid = [["#"] * (w + 2) for _ in range(h + 2)]
+for i in range(h):
+    s = input()
+    for j in range(w):
+        grid[i + 1][j + 1] = s[j]
 
+INF = 10 ** 6
+dp = [[INF] * (w + 2) for _ in range(h + 2)]
+dp[1][1] = int(grid[1][1] == "#")  # 黒なら1、else 0
 
-def get_count(x, y, s) -> int:
-    cnt = 0
-    dx, dy  = 0, 0
-    flag = False
-    route = x+y
-    if s[dx][dy] == "#":
-        cnt += 1
-    for i in range(route):
-        dx, dy, flag = get_route(dx, dy, s, cnt)
-        if flag:
-            cnt += 1
-        if dx == (x-1) and dy == (y-1):
-            break
-    return cnt
-
-
-def get_route(dx, dy, a, count):
-    flag = False
-    if a[dx+1][dy] == ".":
-        x, y = dx+1, dy
-        return x, y , False
-    elif a[dx][dy+1] == ".":
-        x, y = dx, dy+1
-        return x, y, False
-    elif a[dx][dy+1] == '#' and a[dx+1][dy] == "#":
-        if a[dx+1][dy+1] or a[dx+2][dy] == ".":
-            x, y = dx+1, dy
-            flag = True
-            return x, y, flag
-        elif a[dx+1][dy+1] or a[dx][dy+2] == ".":
-            x, y = dx+1, dy
-            flag = True
-            return x, y, flag
-
-print(get_count(h,w,a))
-
-
+for i in range(1, h + 1):
+    for j in range(1, w + 1):
+        if i == 1 and j == 1:
+            continue
+        val_bottom = dp[i - 1][j] + (grid[i - 1][j] == "." and grid[i][j] == "#")
+        print(val_bottom)
+        val_left = dp[i][j - 1] + (grid[i][j - 1] == "." and grid[i][j] == "#")
+        print(val_left)
+        dp[i][j] = min(val_bottom, val_left)
+print(dp[h][w])
