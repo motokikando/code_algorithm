@@ -13,9 +13,16 @@
 r,g,b,n=map(int,input().split())
 a=[0]*(n+1)
 a[0]=1
-print(a)
+# print(a)
 for i in (r,g,b):
+    # print(i)
     for j in range(n+1-i):
-        print(a[j])
         a[j+i]+=a[j]
+        # print(a)
 print(a[n])
+
+#aにn+1の配列を作成
+#aの0番目は1とする
+#r, g, b それぞれでループ
+#j はn+1-i の範囲だけループ
+#a[j+i]の位置にa[j]を追加
